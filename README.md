@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2341bb8-ef0d-41f4-95ff-d10d31b65963/deploy-status)](https://app.netlify.com/sites/sample-weather-app/deploys)
+
 # weather-app
 
 A simple React application that fetches sample weather data from [openweathermap](https://openweathermap.org/).
