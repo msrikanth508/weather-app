@@ -14,4 +14,8 @@ describe('reponseFormatter', () => {
       },
     ]);
   });
+
+  it('should return empty array when response does not have data', () => {
+    expect(reponseFormatter([])).toEqual([]);
+  });
 });

@@ -2,7 +2,7 @@
  * Get hours from date object
  * @param {Date} date
  */
-export const getTimeinHours = (date: Date): string | Date => {
+export const getTimeinHours = (date: Date): string => {
   return date instanceof Date
     ? new Intl.DateTimeFormat('default', {
         hour: '2-digit',
@@ -18,7 +18,7 @@ export const getTimeinHours = (date: Date): string | Date => {
  * Get day from date object
  * @param {Date} date
  */
-export const getDay = (date: Date): string | Date => {
+export const getDay = (date: Date): string => {
   return date instanceof Date
     ? new Intl.DateTimeFormat('default', {
         weekday: 'long',
@@ -30,7 +30,7 @@ export const getDay = (date: Date): string | Date => {
  * Get month from date object
  * @param {Date} date
  */
-export const getMonth = (date: Date): string | Date => {
+export const getMonth = (date: Date): string => {
   return date instanceof Date
     ? new Intl.DateTimeFormat('default', {
         month: 'long',
@@ -42,7 +42,7 @@ export const getMonth = (date: Date): string | Date => {
  * Get 2-digits date from date object
  * @param {Date} date
  */
-export const getDate = (date: Date): string | Date => {
+export const getDate = (date: Date): string => {
   return date instanceof Date
     ? new Intl.DateTimeFormat('default', {
         day: '2-digit',

@@ -56,4 +56,24 @@ describe('fetchWeatherData', () => {
       },
     ]);
   });
+  it('should return empty array when response is null', async () => {
+    const mockFn = jest.fn(() =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve({
+            list: null,
+          }),
+      })
+    );
+
+    mockFetch(mockFn);
+
+    const data = await fetchWeatherData('München', 'DE');
+    expect(mockFn).toBeCalledWith(
+      'https://cors-anywhere.herokuapp.com/https://samples.openweathermap.org/data/2.5/forecast?q=München,DE&appid=b6907d289e10d714a6e88b30761fae22'
+    );
+
+    expect(data).toEqual([]);
+  });
 });

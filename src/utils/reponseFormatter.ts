@@ -31,7 +31,7 @@ const convertKelvinToCelsius = (input: number): number =>
 const dataTransformation = (
   data: Array<ServerResponseShape>
 ): WeatherItemShape[] =>
-  (data || []).map((item) => ({
+  data.map((item) => ({
     id: item.dt,
     date: new Date(item.dt_txt),
     isCloudy: item?.clouds?.all > 0,
